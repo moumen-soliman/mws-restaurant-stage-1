@@ -132,6 +132,7 @@ nav h1 a {
   width: 200px;
 }
 
+
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
@@ -149,10 +150,10 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0;
+  padding:0;
   text-align: left;
   width: calc(100% - 15px);
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.26);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.26)
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -194,6 +195,7 @@ nav h1 a {
   color: #8a4b00;
   font-weight: bolder;
   outline: 2px solid #8a4b00;
+
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -204,19 +206,12 @@ nav h1 a {
   z-index: 1000;
 }
 .inside .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
 }
 
-/* .inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  width: 50%;
-} */
 .inside #map {
   background-color: #ccc;
   height: 100%;
@@ -259,8 +254,7 @@ nav h1 a {
   text-transform: uppercase;
 	width: 100%;
 }
-#restaurant-container, 
-#reviews-container {
+#restaurant-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
@@ -291,7 +285,7 @@ nav h1 a {
   padding: 0 20px 20px;
   position: relative;
   width: 85%;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.26);
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.26)
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -299,6 +293,7 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
 
 /* ====================== Responsive CSS Styles ====================== */
 
@@ -308,40 +303,30 @@ nav h1 a {
   margin:0.5em;
 }
 @media screen and (max-width:360px) {
-
-  .filter-options select {
+.filter-options select {
     width: 150px !important;
   }
 }
 @media screen and (max-width:432px) {
-
   nav h1 a {
-   font-size: 11pt;
-   letter-spacing: 0.5em;
+    font-size: 11pt;
+    letter-spacing: 0.5em;
   }
-  
   .filter-options select {
     width: 165px;
-}
+  }
 #restaurants-list li {
-  
- min-width: calc(100% -30px); 
-  
+    min-width: calc(100% -30px); 
+  }
 }
-
-}
-
 @media screen and (min-width:650px) {
-    
   #restaurants-list li {
     padding: 0;
     width: calc((100% - 65px)/2);
   }
 }
 @media screen and (min-width:960px) {
-    
-    #restaurants-list li {
+  #restaurants-list li {
       width: calc((100% - 100px)/3);
     }
-  
-} 
+}

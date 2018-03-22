@@ -153,6 +153,11 @@ class DBHelper {
     return (`/img/${restaurant.photograph}`);
   }
 
+  static imageUrlsForSrcSet(photograph) {
+    let imageParts = photograph.split('.');
+    return (`/img/${photograph} 400w, /img/${imageParts[0]+'-650.'+imageParts[1]} 600w, /img/${imageParts[0]+'-800.'+imageParts[1]} 900w`);
+  }
+
   /**
    * Map marker for a restaurant.
    */
@@ -167,4 +172,20 @@ class DBHelper {
     return marker;
   }
 
+}
+
+/**
+ * Register ServerWoker 
+ */
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      
+    }, function(err) {
+      // registration failed :(
+      
+    });
+  });
 }
